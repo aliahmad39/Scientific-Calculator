@@ -3,6 +3,7 @@ package com.ali.mylibrary;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,6 +34,7 @@ public class CalcuActivity extends AppCompatActivity {
                     num2.setError("Enter num 2!");
                     return;
                 }
+
                 double a = Double.parseDouble(num1.getText().toString());
                 double b = Double.parseDouble(num2.getText().toString());
                 double c = a + b;
@@ -46,6 +48,8 @@ public class CalcuActivity extends AppCompatActivity {
     private void bindViews() {
         num1 = findViewById(R.id.et_1);
         num2 = findViewById(R.id.et_2);
+        num1.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+        num2.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
         check = findViewById(R.id.btn_submit);
     }
 }
