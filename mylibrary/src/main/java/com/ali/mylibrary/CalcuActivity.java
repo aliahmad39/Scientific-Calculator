@@ -35,7 +35,8 @@ public class CalcuActivity extends AppCompatActivity {
                 double a = Double.parseDouble(num1.getText().toString());
                 double b = Double.parseDouble(num2.getText().toString());
                 double c = a + b;
-                ToasterMessage.display(CalcuActivity.this, Integer.parseInt(String.valueOf(c)));
+                int res = (int) Math.round(c);
+                ToasterMessage.display(CalcuActivity.this, res);
                 finish();
             }
         });
