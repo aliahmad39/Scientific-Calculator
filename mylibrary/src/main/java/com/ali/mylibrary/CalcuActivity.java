@@ -25,6 +25,13 @@ public class CalcuActivity extends AppCompatActivity {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(num1.getText().toString().isEmpty()){
+                    num1.setError("Enter num 1!");
+                }
+                if(num2.getText().toString().isEmpty()){
+                    num2.setError("Enter num 2!");
+                    return;
+                }
                 double a = Double.parseDouble(num1.getText().toString());
                 double b = Double.parseDouble(num2.getText().toString());
                 double c = a + b;
