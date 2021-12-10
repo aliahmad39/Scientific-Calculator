@@ -5,28 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".CalcuActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="#050505"
+        android:textStyle="bold|italic"
+        android:textAllCaps="true"
+        android:layout_marginBottom="50dp"/>
 
     <EditText
         android:id="@+id/et_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_et"
+        android:padding="10dp"
+        android:maxLength="10"
+        android:inputType="number"
+        android:hint="Enter num 1"
         />
     <EditText
         android:id="@+id/et_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:background="@drawable/bg_et"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:maxLength="10"
+        android:inputType="number"
+        android:hint="Enter num 2"
         />
 
     <Button
         android:id="@+id/btn_submit"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit" />
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_et"
+        android:padding="10dp"
+        android:layout_margin="2dp"
+        android:text="sum" />
 </LinearLayout>
